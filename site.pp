@@ -26,7 +26,7 @@ node "openldap-server" {
                 mode   => '0700',
         }
         cron { 'backup':
-                command => '/usr/sbin/slapcat -l /etc/openldap/backups/backup_`date "+\%Y\%m\%d"`.ldid',
+                command => '/usr/sbin/slapcat -l /etc/openldap/backups/backup_`date "+\%Y\%m\%d"`.ldif',
                 user    => 'root',
                 hour    => '3',
                 minute  => '0',
